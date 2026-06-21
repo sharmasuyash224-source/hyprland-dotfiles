@@ -1,0 +1,223 @@
+/* ==========================================
+   COLOR PALETTE
+   ========================================== */
+
+@import url("colors.css");
+
+/* ==========================================
+   GLOBAL
+   ========================================== */
+
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* ==========================================
+   BASE MODULE STYLE
+   ========================================== */
+
+#workspaces,
+#clock,
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#pulseaudio-slider,
+#custom-media-animation,
+#custom-media-now-playing {
+    background: rgba(30, 30, 46, 0.38);
+    border: 1px solid @border;
+    border-radius: 18px;
+    color: @text;
+    box-shadow: none;
+}
+
+/* ==========================================
+   MODULE SPACING
+   ========================================== */
+
+.modules-left > widget,
+.modules-center > widget,
+.modules-right > widget {
+    margin: 6px 4px;
+}
+
+/* ==========================================
+   WORKSPACES
+   ========================================== */
+
+#workspaces {
+    padding: 2px 8px;
+}
+
+#workspaces button {
+    color: @subtext;
+    background: transparent;
+    border-radius: 12px;
+    padding: 0 8px;
+    margin: 4px 2px;
+}
+
+#workspaces button.active {
+    background: rgba(137,180,250,0.20);
+    color: @accent;
+}
+
+#workspaces button:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* ==========================================
+   CLOCK
+   ========================================== */
+
+#clock {
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+/* ==========================================
+   MEDIA
+   ========================================== */
+
+#custom-media-animation,
+#custom-media-now-playing {
+    background: rgba(30, 30, 46, 0.38);
+    border: 1px solid @border;
+    color: @text;
+}
+
+#custom-media-animation {
+    border-radius: 18px 0 0 18px;
+
+    padding-left: 12px;
+    padding-right: 6px;
+
+    margin-right: 0;
+}
+
+#custom-media-now-playing {
+    border-radius: 0 18px 18px 0;
+
+    min-width: 180px;
+
+    padding-left: 6px;
+    padding-right: 14px;
+
+    margin-left: 0;
+}
+
+#custom-media-animation.hidden,
+#custom-media-now-playing.hidden {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+/* ==========================================
+   PULSEAUDIO
+   ========================================== */
+
+#pulseaudio {
+    border-radius: 16px 0 0 16px;
+    padding: 0 10px;
+    margin-right: 0;
+}
+
+#pulseaudio-slider {
+    border-radius: 0 16px 16px 0;
+    padding: 0 10px;
+    min-width: 70px;
+    margin-left: 0;
+}
+
+#pulseaudio-slider slider {
+    min-width: 0;
+    min-height: 0;
+
+    background: transparent;
+    background-image: none;
+
+    border: none;
+    box-shadow: none;
+
+    margin: -100px;
+}
+
+#pulseaudio-slider trough {
+    min-width: 60px;
+    min-height: 2px;
+
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+}
+
+#pulseaudio-slider highlight {
+    min-height: 2px;
+
+    border-radius: 999px;
+    background: @accent;
+}
+
+/* ==========================================
+   RIGHT MODULES
+   ========================================== */
+
+#battery,
+#bluetooth,
+#network,
+#cpu,
+#memory {
+    min-width: 22px;
+    padding: 0 12px;
+}
+
+/* ==========================================
+   BATTERY STATES
+   ========================================== */
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+/* ==========================================
+   TOOLTIPS
+   ========================================== */
+
+tooltip {
+    background: #1e1e2e;
+    border: 1px solid @border;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @text;
+}
+
+/* ==========================================
+   BAR MARGIN
+   ========================================== */
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin-top: 4px;
+}
